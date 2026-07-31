@@ -600,7 +600,10 @@ button.faq__question::after {
 }
 .form-group { display: flex; flex-direction: column; gap: var(--space-2); }
 .form-group label { font-size: var(--text-sm); font-weight: 600; color: var(--color-text); }
+.contact__content > * { min-width: 0; }
+.contact__form { min-width: 0; }
 .form-group input, .form-group select, .form-group textarea {
+  width: 100%; min-width: 0;
   background: #fff;
   border: 1px solid var(--color-border-2);
   border-radius: var(--radius-md);
@@ -748,3 +751,7 @@ button.faq__question::after {
   .cookie-banner__actions { justify-content: stretch; }
   .cookie-btn { flex: 1; }
 }
+
+
+/* mobiel: nooit horizontaal scrollen */
+html, body { overflow-x: hidden; }
