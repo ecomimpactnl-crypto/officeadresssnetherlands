@@ -368,7 +368,7 @@ a:hover { color: var(--color-accent-hover); }
 .services__grid {
   display: grid; gap: var(--space-5); margin-top: var(--space-12);
 }
-.services__grid--four { grid-template-columns: repeat(2, minmax(0, 440px)); justify-content: center; }
+.services__grid--four { grid-template-columns: repeat(3, 1fr); }
 
 .service-card {
   position: relative;
@@ -455,9 +455,9 @@ a:hover { color: var(--color-accent-hover); }
 .service-card--featured .service-card__cta:hover { background: var(--color-accent-hover); }
 
 @media (max-width: 1024px) {
-  .services__grid--four { grid-template-columns: repeat(2, 1fr); }
+  .services__grid--four { grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
 }
-@media (max-width: 600px) {
+@media (max-width: 880px) {
   .services__grid--four { grid-template-columns: 1fr; max-width: 440px; margin-left: auto; margin-right: auto; }
   .service-card:not(.service-card--featured) .service-card__title { margin-top: 0; }
 }
