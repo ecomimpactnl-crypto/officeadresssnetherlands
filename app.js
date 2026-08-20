@@ -117,6 +117,10 @@
         .then(function (res) { return res.json(); })
         .then(function (json) {
           if (json.success) {
+            // Google Ads-conversie: vul het label in uit Google Ads (Doelen > Conversies > tag instellen)
+            if (typeof gtag === 'function' && window.ADS_CONVERSION_LABEL) {
+              gtag('event', 'conversion', { send_to: 'AW-18359968202/' + window.ADS_CONVERSION_LABEL });
+            }
             btn.innerHTML = '&#10003; Verstuurd!';
             btn.style.background = '#2d7a3a';
             btn.style.borderColor = '#2d7a3a';
