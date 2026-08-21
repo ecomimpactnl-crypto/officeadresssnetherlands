@@ -1,16 +1,16 @@
-/* cookie.js — lightweight cookie banner + consent for Google Maps & Google Ads
-   English */
+/* cookie.js — leichter Cookie-Banner + Consent für Google Maps & Google Ads
+   Deutsch */
 (function () {
   'use strict';
 
   var TEXT = {
-    message: 'We use necessary cookies and — with your consent — cookies for map display and ad measurement.',
-    policy: 'Learn more',
-    policyUrl: './cookie-policy.html',
-    accept: 'Accept',
-    reject: 'Only necessary',
-    mapNotice: 'To display the map, cookies from an external map provider are set. Please accept to load the map.',
-    mapButton: 'Load map'
+    message: 'Wir verwenden notwendige Cookies und – mit Ihrer Einwilligung – Cookies für die Kartenanzeige und die Anzeigenmessung.',
+    policy: 'Mehr erfahren',
+    policyUrl: './cookie-richtlinie.html',
+    accept: 'Akzeptieren',
+    reject: 'Nur notwendige',
+    mapNotice: 'Um die Karte anzuzeigen, werden Cookies eines externen Kartenanbieters gesetzt. Bitte akzeptieren Sie, um die Karte zu laden.',
+    mapButton: 'Karte laden'
   };
 
   window.dataLayer = window.dataLayer || [];
@@ -78,7 +78,7 @@
     el.id = 'cookie-banner';
     el.className = 'cookie-banner';
     el.setAttribute('role', 'dialog');
-    el.setAttribute('aria-label', 'Cookie consent');
+    el.setAttribute('aria-label', 'Cookie-Einwilligung');
     el.innerHTML =
       '<p class="cookie-banner__text">' + TEXT.message +
       ' <a href="' + TEXT.policyUrl + '">' + TEXT.policy + '</a></p>' +
